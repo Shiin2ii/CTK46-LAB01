@@ -6,6 +6,13 @@ const learningGoals = [
   "Áp dụng tốt kiến thức vào các dự án thực tế.",
 ];
 
+const skills = [
+  "Next.js và React",
+  "HTML, CSS, JavaScript/TypeScript",
+  "Xây dựng giao diện responsive",
+  "Làm việc với Git và GitHub",
+];
+
 const introductionItems = [
   {
     title: "Thông tin nhanh",
@@ -119,6 +126,35 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="rounded-[2rem] border border-white/60 bg-white/85 p-8 shadow-[0_25px_70px_rgba(15,23,42,0.08)] backdrop-blur xl:p-9">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">
+                Năng lực phát triển
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+                Kỹ năng đang học
+              </h2>
+            </div>
+            <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+              Kỹ năng
+            </span>
+          </div>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {skills.map((skill) => (
+              <article
+                key={skill}
+                className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-5"
+              >
+                <p className="text-base font-medium leading-7 text-slate-800">
+                  {skill}
+                </p>
+              </article>
+            ))}
           </div>
         </section>
       </div>
